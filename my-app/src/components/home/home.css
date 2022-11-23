@@ -1,0 +1,117 @@
+.homeContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.bodyContainer{
+    height: 90vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 20vh;
+
+    position: relative;
+    
+}
+
+.bodyContainer .textoInicialContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 600px;
+    height: 300px;
+    text-align: center;
+
+    margin-bottom: 250px;
+}
+.bodyContainer .textoInicialContainer p{
+    font-family: Montserrat;
+}
+
+.bodyContainer .textoInicialContainer #textoInicial{
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 80px;
+    text-align: center;
+
+    color: #000000;
+
+    margin: 0;
+}
+
+.bodyContainer .textoInicialContainer p{
+    width: 60%;
+}
+
+.bodyContainer .textoInicialContainer #bttnSignUpInicio {
+    display: block;
+	background: #46414E;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+	border: none;
+	cursor: pointer;
+	width: 15%;
+	padding: 10px;
+	border-radius: 100px;
+	color: #fff;
+	font-size: 16px;
+	transition: .3s ease all;
+    text-decoration: none;
+    border: solid 1px;
+    margin-top: 20px; 
+}
+.bodyContainer .textoInicialContainer #bttnSignUpInicio:hover{
+    background: #fff;
+    color: #46414E;
+    border: solid 1px #46414E;
+}
+
+
+
+.logInContainer{
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    z-index: -1;
+}
+.logInContainerSlided{
+    z-index: 1;
+}
+.logInContainer .blurDiv{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(0px);
+
+}
+.logInContainer .divSlided{
+    z-index: 2;
+    animation: blur 1s forwards;
+}
+.logInContainer .logInSlide{
+    position: fixed;
+    right: -30vw;
+}
+.logInContainer .logInSlided{
+    z-index: 2;
+    animation: slide .6s forwards;
+}
+
+@keyframes slide {  
+    100% { right: 0; }
+}
+@keyframes blur {
+    100% { backdrop-filter: blur(5px);
+        /* background: rgb(251, 204, 36, 0.15); */
+            /* background: rgb(255, 102, 51, 0.1); */
+            background: rgb(231,231,231,0.4);}
+}

@@ -1,0 +1,84 @@
+
+.headerContainer{
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+
+    margin: auto;
+
+    width: 100vw;
+    height: 10vh;
+
+    background-color: #46414E;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.65rem;
+
+    text-align: center;
+
+    transition-property: all; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+}
+.hiddenHeader{
+    top: -10vh;
+}
+.shownHeader{
+    top: 0px;
+}
+
+.headerContainer .logoHeaderContainer{
+    padding: 0;
+    text-align: center;
+    align-self: center;
+
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+.headerContainer .logoHeaderContainer .logoHeader{
+    margin: 0;
+    padding: 0;
+    border-radius:50%;
+    width: 4vw;
+    height: 7vh;
+}
+
+.headerContainer .navBttnsContainer{
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    
+}
+.headerContainer .accountBttnsContainer{
+    flex: 1;
+    display: flex;
+    justify-content: right;
+}
+
+.headerContainer .headerLink{
+    margin: 0 20px;
+    color: #FBFFFE;
+    text-decoration: none;
+}
+
+.headerContainer .headerLink#signUpLink,
+.headerContainer .headerLink#beneficiosLink{
+    color: #FBCC24;
+}
+.headerContainer .headerLink#signUpLink{
+    margin-right: 30px;
+}
+.headerContainer .headerLink#inicioLink{
+    text-decoration: underline #FBCC24 ;
+    text-underline-offset: 5px;
+}
