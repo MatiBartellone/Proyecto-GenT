@@ -1,4 +1,7 @@
 .mainFooterContainer{
+    position: relative;
+    bottom: 0;
+    
     width: 100vw;
     height: 5vh;
 
@@ -7,6 +10,7 @@
     font-family: 'Roboto';
     font-style: normal;
     text-align: left;
+
 }
 
 .mainFooterContainer .textContainer{

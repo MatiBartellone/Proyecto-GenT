@@ -3,7 +3,8 @@ import './App.css';
 import React from 'react';
 
 import Home from './components/home/home';
-
+import Beneficios from './components/beneficios/beneficios';
+import Banco from './components/banco/banco';
 
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 
@@ -14,6 +15,8 @@ function App() {
       <Routes>
 
         <Route path="/" element={<Home/>}/>
+        <Route path="/beneficios" element={<Beneficios/>}/>
+        <Route path="/banco" element={<Banco/>}/>
         
         
 

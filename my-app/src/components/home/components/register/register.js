@@ -10,11 +10,19 @@ import {useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faUser, faEnvelope, faLock, faEye, faEyeSlash} from '@fortawesome/free-solid-svg-icons';
 
+import axios from 'axios';
 
 import { Formik, useFormik } from 'formik';
 import * as Yup from 'yup';
 
+const baseURL = "http://localhost:8080/register";
 
+function createPost(values) {
+    // Simple POST request with a JSON body using axios
+    const article = { values};
+    axios.post(baseURL, article)
+        .then(response => console.log(response.data + " " + response.status));
+}
 
 function Register(props)
 {    
@@ -59,7 +67,7 @@ function Register(props)
         }}
         validationSchema={validateLogin}
         onSubmit={values => {
-            console.log(values);
+            createPost(values);
         }}
     >
     {( {handleSubmit, handleChange, handleBlur, values, errors} ) => (

@@ -71,14 +71,20 @@
     text-decoration: none;
 }
 
-.headerContainer .headerLink#signUpLink,
-.headerContainer .headerLink#beneficiosLink{
-    color: #FBCC24;
-}
 .headerContainer .headerLink#signUpLink{
     margin-right: 30px;
 }
-.headerContainer .headerLink#inicioLink{
+
+
+.headerContainer  .colorNaranja{
+    color: #FBCC24;
+}
+
+.headerContainer .paginaSeleccionada{
     text-decoration: underline #FBCC24 ;
+    text-underline-offset: 5px;
+}
+.headerContainer .paginaSeleccionadaBlanca{
+    text-decoration: underline #FBFFFE ;
     text-underline-offset: 5px;
 }

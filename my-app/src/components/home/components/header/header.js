@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import {Link, Router} from 'react-router-dom'
 
 function useScrollDirection() {
+
   const [scrollDirection, setScrollDirection] = useState(null);
 
   useEffect(() => {
@@ -35,7 +36,7 @@ function Header(props) {
 
   const [scroll, setScroll] = useState(false);
 
-  const {slideLogIn, slideSignUp} = props;
+  const {slideLogIn, slideSignUp, paginaSeleccionada} = props;
 
   const changeClass = () => {
     setScroll(true);
@@ -47,9 +48,9 @@ function Header(props) {
     <div onScroll={changeClass} className={`headerContainer ${scrollDirection == "down" ? 'hiddenHeader' : 'shownHeader'}`}>
 
         <div className='navBttnsContainer'>
-            <Link to='/' id='inicioLink' className='headerLink'>Inicio</Link>
-            <Link to='/' id='beneficiosLink' className='headerLink'>Beneficios</Link>
-            <Link to='/' id='bancoLink' className='headerLink'>Banco</Link>
+            <Link to='/' id='inicioLink' className={paginaSeleccionada =='home'?'headerLink paginaSeleccionada':  'headerLink'}>Inicio</Link>
+            <Link to='/beneficios' id='beneficiosLink' className={paginaSeleccionada =='beneficios'?'headerLink paginaSeleccionadaBlanca  colorNaranja':'headerLink colorNaranja'}>Beneficios</Link>
+            <Link to='/banco' id='bancoLink' className={paginaSeleccionada =='banco'?'headerLink paginaSeleccionada':  'headerLink'}>Banco</Link>
         </div>
 
         <div className='logoHeaderContainer'>
@@ -58,7 +59,7 @@ function Header(props) {
 
         <div className='accountBttnsContainer'>
             <Link onClick={slideLogIn} id='logInLink' className='headerLink'>Log in</Link>
-            <Link onClick={slideSignUp} id='signUpLink' className='headerLink'>Sign up</Link>
+            <Link onClick={slideSignUp} id='signUpLink' className='headerLink colorNaranja'>Sign up</Link>
         </div>
     </div>
     </>
