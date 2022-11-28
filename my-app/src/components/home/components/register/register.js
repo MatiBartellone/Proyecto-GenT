@@ -21,7 +21,12 @@ function createPost(values) {
     // Simple POST request with a JSON body using axios
     const article = { values};
     axios.post(baseURL, article)
-        .then(response => console.log(response.data + " " + response.status));
+        .then(response => {
+            console.log(response.data + " " + response.status)
+            if (response.status === 270) {
+                alert("El usuario ya existe");
+            }
+        });
 }
 
 function Register(props)
