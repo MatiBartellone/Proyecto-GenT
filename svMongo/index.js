@@ -59,14 +59,14 @@ app.post('/register', async (req, res) => {
     const user = new User()
 
     const userDB = await user.getUser(email)
-    console.log(userDB)
+
     if (userDB == null) {
         script.hash(password, saltRounds, async function(err, hash) {
             usuario.password = hash
             user.createUser(usuario)
         })
     }else {
-        res.status(270).send("Usuario ya existe")
+        res.status(270)
     }
 
     
